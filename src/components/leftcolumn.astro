@@ -1,0 +1,74 @@
+---
+import IconoCorreo from "../assets/correo.svg";
+import IconoUbicacion from "../assets/ubicacion.svg";
+import IconoTelefono from "../assets/telefono.svg";
+const aptitudes = [
+    {
+        contenido:"Capacidad de manejar<br>fácilmente una situación<br>bajo mucha presión"
+    },
+    {
+        contenido:"Amigable con el entorno<br>laboral" 
+    },
+    {
+        contenido:"Persona con ganas de<br>aprender incluyendo<br>una gran facilidad para<br>ello y con una gran<br>pasión por la<br>programación "
+    }
+
+];
+
+const idiomas = [
+    {
+        nombre:"Castellano:" ,
+        nivel:"Nativo."
+    },
+    {
+        nombre:"Ingles:" ,
+        nivel:"Nivel Medio."
+    }
+
+    
+];
+const numero = "+34-600-66-11-50";
+const correo = "izanortega22@gmail.com";
+const ubicacion = "Valdemoro, Madrid";
+const github = "https://izanlopez32.github.io/Pagina-<br>Izan-Lopez-Ortega";
+---
+
+<div id="leftcolumn">
+    <p><h2>CONTACTO</h2></p>
+    <div class="contacto">
+        <img src={IconoTelefono.src} /><span>{numero}</span>
+    </div>
+    <div class="contacto">
+        <img src={IconoCorreo.src} /><span>{correo}</span>
+    </div>
+    <div class="contacto">
+        <img src={IconoUbicacion.src} /><span>{ubicacion}</span>
+    </div>
+    <div class="contacto">
+        <img src={IconoCorreo.src} /><span set:html={github}></span>
+    </div>
+    <p><br /><h2>DATOS PERSONALES</h2></p>
+    <div id="fnacimiento">
+        <p><b>Fecha de nacimiento</b></p>
+        <span>29 de Agosto de 2005</span>
+    </div>
+    <p><br /><h2>IDIOMAS</h2></p>
+    <div id="idiomas">
+        {idiomas.map(idioma=>(
+        <div>
+            <p><strong>{idioma.nombre}</strong></p>
+            <span>{idioma.nivel}</span>
+        </div>
+))}
+</div>
+        <p><br /><h2>APTITUDES</h2></p>
+    <div id="aptitudes">
+        <div>
+            <ul>
+{aptitudes.map(aptitud =>(
+    <li set:html={aptitud.contenido}></li>
+))}
+            </ul>
+        </div>
+    </div>
+</div>

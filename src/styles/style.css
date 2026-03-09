@@ -1,0 +1,116 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+#fondo {
+    display: flex;
+    background-color: azure;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+header>p {
+    font-size: 80px;
+}
+
+#leftcolumn {
+    flex: 1 1 250px;
+    padding: 10px 20px;
+}
+
+#leftcolumn .contacto {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+#leftcolumn #aptitudes ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#fnacimiento {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: -15px 0 0 40px;
+}
+
+#idiomas {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: larger;
+}
+
+ul {
+    margin-left: -20px;
+}
+
+#rightcolumn {
+    flex: 2 1 300px;
+    padding: 10px 20px;
+}
+
+.experiencia {
+    font-size: larger;
+    margin-bottom: 25px;
+}
+
+#rightcolumn ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#lenguajes ul {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+#lenguajes ul li {
+    padding-right: 15px;
+}
+
+#institutos ul {
+    list-style: none;
+}
+
+#institutos ul li {
+    margin-left: -20px;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}

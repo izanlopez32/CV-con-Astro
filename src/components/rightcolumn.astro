@@ -1,0 +1,130 @@
+---
+const experiencias = [
+    {
+        puesto: "Técnico informático en NETCheck S.A",
+        duracion: "Duración de 3 meses |  Septiembre 2023 - Diciembre 2023"
+    },
+    {
+        puesto: "Técnico informático en Universitas Nebrissensis",
+        duracion: "Duración de 10 meses |  Junio 2025 - Actualidad."
+    },
+    {
+        puesto: "Técnico informático N1/N2 en Grupo Sermicro",
+        duracion: "Duración de 6 meses |  Abril 2024 - Septiembre 2024."
+    },
+];
+const conocimientos=[
+    {
+    contenido: " Fluidez con herramientas relacionadas con Java y PHP y<br>programación de frontend como Bootstrap o jQuery."
+    },
+    {
+contenido: " Abierto al aprendizaje de nuevos lenguajes de<br>programación y herramientas en la nube para facilitar su proceso"
+    },
+    {
+contenido:"Fluidez con creacion de instancias, direcciones DNS, S3 y derivados con AWS.<br>Capaz de hacer proyectos escalables segun la demanda solicitada."
+    },
+    {
+contenido: "Creación de aplicaciones optimizadas utilizando<br>diferentes lenguajes de programación."
+    },
+    {
+contenido: "Facilidad para aprender nuevos lenguajes de programación<br>dada las necesidades del proyecto solicitado."
+    }
+]
+const lenguajes=[
+    {
+nombre: "Java",
+nivel: "Medio"
+    },
+    {
+nombre: "HTML",
+nivel: "Avanzado"
+    },
+    {
+nombre: "CSS",
+nivel: "Avanzado"
+    },
+    {
+nombre: "Bash",
+nivel: "Básico"
+    },
+    {
+nombre: "PHP",
+nivel: "Avanzado"
+    },
+    {
+nombre: "SQL",
+nivel: "Medio"
+    },
+    {
+nombre: "JavaScript",
+nivel: "Medio"
+    },
+    {
+nombre: "Kotlin",
+nivel: "Básico"
+    },
+    {
+nombre: "Vue.js",
+nivel: "Medio"
+    },
+    {
+nombre: "Bootstrap",
+nivel: "Medio"
+    },
+    {
+nombre: "C#",
+nivel: "Básico"
+    }
+]
+const centros = [
+    {
+    centro:"Centro de estudios IES Villablanca (Vicálvaro)",
+    nivel:"Grado medio de Sistemas Microinformáticos y Redes ",
+    tiempo:"Septiembre 2021 - Diciembre 2023."
+    },
+    {
+centro:"Centro de estudios IES Domenico Scarlatti (Aranjuez)",
+nivel:"Grado superior de Desarrollo de aplicaciones web",
+tiempo:"Septiembre 2024 - Actualidad."
+}
+]
+---
+
+<div id="rightcolumn">
+    <h2>EXPERIENCIA</h2>
+    {experiencias.map(experiencia => (
+        <div class="experiencia">
+            <strong>{experiencia.puesto}</strong><br>
+            <span>{experiencia.duracion}</span>
+        </div>
+    ))}
+    <h2>CONOCIMIENTOS</h2>
+    <h3>Desarrollados de Aplicaciones Web Junior</h3>
+<ul>
+    {conocimientos.map(conocimiento =>(
+        <div class="conocimiento">
+            
+            <li set:html={conocimiento.contenido}></li>
+        </div>
+    ))}
+</ul>
+<div id="lenguajes">
+    <h2>TECNOLOGIAS CONOCIDAS</h2>
+<ul>
+{lenguajes.map(lenguaje =>(
+<li>Nivel en {lenguaje.nombre}: {lenguaje.nivel}</li>
+))}
+</ul>
+</div>
+<h2>DATOS ACADÉMICOS</h2>
+<div id="institutos">
+<ul>
+    {centros.map(centro =>(
+        <li><b>{centro.centro}</b></li>
+        <li>{centro.nivel} |</li>
+        <li>{centro.tiempo}</li>
+        <br>
+    ))}
+</ul>
+</div>
+</div>
