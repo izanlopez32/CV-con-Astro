@@ -93,26 +93,23 @@ tiempo:"Septiembre 2024 - Actualidad."
 <div id="rightcolumn" class="flex-[2_1_200px] pr-30 max-[600px]:px-20">
     <h2 class="text-xl font-bold">EXPERIENCIA</h2>
     {experiencias.map(experiencia => (
-        <div class="text-lg mb-6 mt-6 max-[600px]:text-sm">
-            <strong>{experiencia.puesto}</strong><br>
+        <div class="text-lg mb-6 mt-6 max-[600px]:text-sm hover:scale-110 transition duration-200">
+            <strong>{experiencia.puesto}</strong><br/>
             <span>{experiencia.duracion}</span>
         </div>
     ))}
     <h2 class="text-xl font-bold">CONOCIMIENTOS</h2>
     <h3 class="text-lg font-bold mt-2">Desarrollados de Aplicaciones Web Junior</h3>
 <ul class="list-disc flex flex-col gap-8 mt-6 ml-6 max-[600px]:text-sm">
-    {conocimientos.map(conocimiento =>(
-        <div class="conocimiento">
-            
-            <li set:html={conocimiento.contenido}></li>
-        </div>
+    {conocimientos.map(conocimiento =>(    
+            <li set:html={conocimiento.contenido} class="conocimiento hover:scale-110 transition duration-200"></li>
     ))}
 </ul>
 <div id="lenguajes">
     <h2 class="text-xl font-bold mt-6 mb-6">TECNOLOGIAS CONOCIDAS</h2>
 <ul class="list-disc grid grid-cols-3 ml-6 max-[600px]:text-sm">
 {lenguajes.map(lenguaje =>(
-<li class="pr-5">Nivel en {lenguaje.nombre}: {lenguaje.nivel}</li>
+<li class="pr-5 pb-5 hover:scale-110 transition hover:font-bold duration-100 hover:text-purple-900">Nivel en {lenguaje.nombre}: {lenguaje.nivel}</li>
 ))}
 </ul>
 </div>
@@ -120,10 +117,11 @@ tiempo:"Septiembre 2024 - Actualidad."
 <div id="institutos" class="max-[600px]:text-sm">
 <ul>
     {centros.map(centro =>(
-        <li><b>{centro.centro}</b></li>
-        <li>{centro.nivel} |</li>
-        <li>{centro.tiempo}</li>
-        <br>
+        <li class="mb-6 hover:scale-105 hover:text-gray-700 transition duration-200">
+        <b>{centro.centro}</b><br/>
+        {centro.nivel} |<br/>
+        {centro.tiempo}
+        </li>
     ))}
 </ul>
 </div>
