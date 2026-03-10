@@ -1,3 +1,17 @@
+@import "tailwindcss";
+
+/*Usamos @layer para referenciar estilos globales*/
+@layer base {
+  *,#fondo {
+    @apply box-border;
+    }
+}
+/*Lo introducido en @theme podrá ser usado en diferentes
+clases*/
+@theme {
+    --font-arial: Arial, Helvetica, sans-serif;
+}
+/*
 * {
     box-sizing: border-box;
 }
@@ -49,7 +63,7 @@ header>p {
     margin-bottom: 10px;
 }
 
-#leftcolumn #aptitudes ul {
+**#leftcolumn #aptitudes ul {
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -114,3 +128,4 @@ ul {
         flex-wrap: wrap;
     }
 }
+    */
