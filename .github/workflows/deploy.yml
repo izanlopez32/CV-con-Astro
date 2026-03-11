@@ -20,8 +20,16 @@ jobs:
         with:
           node-version: 18
 
-      - run: npm install
-      - run: npm run build
+      # Instala dependencias de forma limpia (mejor para CI)
+      - name: Install dependencies
+        run: npm ci
+
+      # Solución al error de Tailwind Oxide
+      - name: Fix Tailwind Oxide
+        run: npm rebuild @tailwindcss/oxide --force
+
+      - name: Build project
+        run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
         with:
